@@ -1,0 +1,30 @@
+﻿@using NotlaGel.Entities
+@model NotlaGelUser
+@{
+    ViewBag.Title = "Profiliniz";
+}
+
+<h2>EditProfile</h2>
+
+<div class="container">
+    <div class="row">
+        <h2>@ViewBag.Title</h2>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="~/Images/@Model.ProfileImageFilename" class="img-circle" width="128" height="128" />
+        </div>
+        <div class="col-md-8">
+            <h3>@(Model.Name + "" + Model.SurName)</h3>
+            <br />
+            <h5><b>@Html.DisplayNameFor(model=> model.UserName) : </b>@Model.UserName</h5>
+            <h5><b>@Html.DisplayNameFor(model => model.Email) : </b>@Model.Email</h5>
+            <br />
+            <h6><a href="#">More...</a></h6>
+            <br />
+        </div>
+        
+    </div>
+</div>
+
